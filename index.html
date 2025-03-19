@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced HTML5 Elements and Forms</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #28a745;
+      padding: 10px 20px;
+      color: white;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1, h2, h3 {
+      color: #28a745;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+
+    /* Form Styles */
+    form {
+      max-width: 400px;
+      margin: 20px 0;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#list">List</a>
+    <a href="#image">Image</a>
+    <a href="#table">Table</a>
+    <a href="#form">Form</a>
+    <a href="#multimedia">Multimedia</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Advanced HTML5 Elements and Forms</h1>
+
+    <!-- Ordered List -->
+    <section id="list">
+      <h2>Ordered List with Roman Numerals</h2>
+      <ol type="I">
+        <li>Introduction to HTML5</li>
+        <li>Multimedia Elements</li>
+        <li>Forms and Validation</li>
+        <li>Tables and Lists</li>
+        <li>Semantic HTML</li>
+      </ol>
+    </section>
+
+    <!-- External Image -->
+    <section id="image">
+      <h2>External Image from Pexels</h2>
+      <img src="https://images.pexels.com/photos/15286/pexels-photo.jpg" alt="Nature Image" width="600">
+    </section>
+
+    <!-- Contact Table -->
+    <section id="table">
+      <h2>Contact Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Mobile</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>123 Main St, City</td>
+            <td>+1 123-456-7890</td>
+            <td>john.doe@example.com</td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>456 Elm St, Town</td>
+            <td>+1 234-567-8901</td>
+            <td>jane.smith@example.com</td>
+          </tr>
+          <tr>
+            <td>Alice Johnson</td>
+            <td>789 Oak St, Village</td>
+            <td>+1 345-678-9012</td>
+            <td>alice.johnson@example.com</td>
+          </tr>
+          <tr>
+            <td>Bob Brown</td>
+            <td>101 Pine St, Hamlet</td>
+            <td>+1 456-789-0123</td>
+            <td>bob.brown@example.com</td>
+          </tr>
+          <tr>
+            <td>Charlie Davis</td>
+            <td>202 Maple St, Borough</td>
+            <td>+1 567-890-1234</td>
+            <td>charlie.davis@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="form">
+      <h2>Registration Form</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">Female</label>
+        </div>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Select your country</option>
+          <option value="us">United States</option>
+          <option value="ca">Canada</option>
+          <option value="uk">United Kingdom</option>
+          <option value="au">Australia</option>
+        </select>
+
+        <label for="interests">Interests:</label>
+        <div>
+          <input type="checkbox" id="coding" name="interests" value="coding">
+          <label for="coding">Coding</label>
+          <input type="checkbox" id="music" name="interests" value="music">
+          <label for="music">Music</label>
+          <input type="checkbox" id="sports" name="interests" value="sports">
+          <label for="sports">Sports</label>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <!-- Multimedia Elements -->
+    <section id="multimedia">
+      <h2>Multimedia Elements</h2>
+      <h3>Audio</h3>
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Video</h3>
+      <video controls width="600">
+        <source src="https://media.istockphoto.com/id/2154818826/video/hyperlapse-top-view-smart-city-wireless-network-signal-data-transmission-high-speed-and.mp4?s=mp4-640x640-is&k=20&c=hqKNZO9iLt1SOkl2DRT39IT7RcPyLYDASITuFW_AjdI=" type="video/mp4">
+        Your browser does not support the video element.
+      </video>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025. June Wahu. Advanced HTML5 Assignment. All rights reserved.</p>
+  </footer>
+</body>
+</html>
